@@ -19,9 +19,9 @@ app.get('/', (req,res)=>{
     res.send('Hello World');
 })
 
-app.use('/api',require('./Routes/CreateUser'));
-app.use('/api',require('./Routes/DisplayData'));
-app.use('/api',require('./Routes/OrderData'));  
+app.use('/api',require('./api/Routes/CreateUser'));
+app.use('/api',require('./api/Routes/DisplayData'));
+app.use('/api',require('./api/Routes/OrderData'));  
 
 mongo()
 .then(()=>{
